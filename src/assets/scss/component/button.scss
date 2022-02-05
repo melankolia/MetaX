@@ -1,0 +1,59 @@
+.v-btn:hover::before {
+  opacity: 0 !important;
+}
+
+.v-input__slot {
+  background-color: #121212 !important;
+  color: white !important;
+}
+
+.v-text-field--outlined fieldset {
+  color: rgba(255, 255, 255, 0.5) !important;
+  border-width: 3px !important;
+}
+
+.v-input--is-focused.v-text-field--outlined fieldset {
+  color: #ff9b33 !important;
+  border-width: 3px !important;
+}
+
+.v-text-field__slot > label {
+  color: #ffffff !important;
+  opacity: 0.3;
+  font-family: "Ubuntu", sans-serif !important;
+  font-size: 14px !important;
+  font-style: normal;
+  font-weight: 400 !important;
+  line-height: 21px;
+  letter-spacing: 0.25px;
+  text-align: left;
+}
+
+.v-text-field__slot > input {
+  color: #ffffff !important;
+  font-family: "Ubuntu", sans-serif !important;
+  font-size: 14px !important;
+  font-style: normal;
+  font-weight: 400 !important;
+  line-height: 21px;
+  letter-spacing: 0.25px;
+  text-align: left;
+}
+
+.v-tab {
+  text-transform: none !important;
+  font-family: "Ubuntu", sans-serif !important;
+  font-size: 16px !important;
+  font-style: normal !important;
+  line-height: 24px !important;
+  letter-spacing: 0.15000000596046448px !important;
+  text-align: left !important;
+}
+
+.v-tabs-slider-wrapper {
+  height: 2px !important;
+}
+
+.v-tabs > .v-tabs-bar {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+}
