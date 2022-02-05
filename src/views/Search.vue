@@ -2,7 +2,11 @@
   <div class="d-flex flex-column justify-space-between search-page">
     <div class="d-flex flex-column">
       <p class="white--text headline-5 regular ma-0">Search</p>
-      <TextField v-model="test" customStyle="margin: 20px 0 0 0" />
+      <TextField
+        v-model="keyword"
+        :handleKeyDown="handleKeyDown"
+        customStyle="margin: 20px 0 0 0"
+      />
       <v-divider
         v-if="$vuetify.breakpoint.smAndUp"
         style="margin: 30px 0"
@@ -19,7 +23,7 @@
       </p>
       <div style="margin: 20px 0 30px 0" class="d-flex flex-row align-end">
         <p class="white--text headline-3 bold ma-0">
-          30
+          {{ total || "#" }}
           <span class="white--text subtitle-ubuntu-1 regular"> results </span>
         </p>
       </div>
@@ -45,13 +49,23 @@ export default {
   },
   data() {
     return {
-      test: null,
+      keyword: null,
+      total: 30,
       limitPerPage: 3,
     };
   },
   methods: {
     handleClick() {
-      this.$router.push({ name: "Results" });
+      this.$router.push({
+        name: "Results",
+        query: {
+          pageSize: this.limitPerPage,
+          keyword: this.keyword,
+        },
+      });
+    },
+    handleKeyDown(e) {
+      if (e?.keyCode === 13) this.handleClick();
     },
   },
   watch: {

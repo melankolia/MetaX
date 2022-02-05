@@ -2,17 +2,31 @@
   <div class="d-flex flex-column tags-container">
     <p class="white--text headline-4 regular mb-6">Tags</p>
     <div class="d-flex flex-row flex-wrap justify-space-between">
-      <TagCard v-for="item in 20" :key="item" />
+      <template v-if="loading">
+        <TagSkeleton v-for="item in 10" :key="item" />
+      </template>
+      <template v-else>
+        <TagCard v-for="(item, index) in tags" :tag="item" :key="index" />
+      </template>
     </div>
   </div>
 </template>
 
 <script>
 const TagCard = () => import("@/components/Cards/TagCard");
+const TagSkeleton = () => import("@/components/Skeleton/Tag");
+import TagService from "@/services/resources/tag-page.service";
 
 export default {
   components: {
     TagCard,
+    TagSkeleton,
+  },
+  data() {
+    return {
+      loading: true,
+      tags: [],
+    };
   },
   methods: {
     handleBack() {
@@ -20,6 +34,20 @@ export default {
         name: "Search",
       });
     },
+    getList() {
+      this.loading = true;
+      TagService.getList()
+        .then(({ data }) => {
+          this.tags = data;
+        })
+        .catch((err) => {
+          console.log(err);
+        })
+        .finally(() => (this.loading = false));
+    },
+  },
+  mounted() {
+    this.getList();
   },
 };
 </script>

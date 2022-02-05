@@ -8,6 +8,7 @@
       class="white"
       :style="customStyle"
       @click="onClick"
+      :loading="loading"
     >
       <p class="text-button ma-0">{{ text }}</p>
     </v-btn>
@@ -18,6 +19,7 @@
 export default {
   props: {
     text: { type: String, required: true, default: "" },
+    loading: { type: Boolean, required: false, default: false },
     customStyle: { type: String, required: false, default: "" },
     onClick: { type: Function, required: false, default: () => {} },
   },

@@ -9,6 +9,7 @@
     label="Keyword"
     :class="customClass"
     :style="customStyle"
+    @keydown="handleKeyDown"
   />
 </template>
 
@@ -18,6 +19,7 @@ export default {
     customClass: { type: String, required: false, default: "" },
     customStyle: { type: String, required: false, default: "" },
     value: { required: false },
+    handleKeyDown: { type: Function, required: false, default: () => {} },
   },
   computed: {
     computedValue: {

@@ -1,19 +1,31 @@
 <template>
   <div class="d-flex flex-column mb-9 tag-card">
     <div class="d-flex flex-column justify-end tag-container">
-      <div class="tag-box headline-5 bold px-2">Summary</div>
+      <div class="tag-box headline-5 bold px-2">{{ tag.name }}</div>
     </div>
     <div class="d-flex flex-column mt-3">
       <div class="tag-subtitle white--text title-2 reguler">
-        Very Loooooooooooooooong
+        {{ tag.name }}
       </div>
-      <div class="subtitle-ubuntu-2 reguler">350 Results</div>
+      <div class="subtitle-ubuntu-2 reguler">{{ tag.count }} Results</div>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    tag: {
+      type: Object,
+      required: true,
+      default: () => ({
+        id: 0,
+        name: "",
+        count: 0,
+      }),
+    },
+  },
+};
 </script>
 
 <style scoped>
