@@ -59,7 +59,7 @@ export default {
   methods: {
     handleBack() {
       this.$router.replace({
-        name: "Home",
+        name: "search",
       });
     },
     handleClick() {

@@ -8,7 +8,7 @@
         <router-view />
       </transition>
     </v-container>
-    <BottomNavbar v-if="$vuetify.breakpoint.xs" />
+    <BottomNavbar v-if="$vuetify.breakpoint.xs && isSearch" />
   </v-main>
 </template>
 
@@ -33,6 +33,9 @@ export default {
   computed: {
     isTags() {
       return this.$route.name === "tags";
+    },
+    isSearch() {
+      return this.$route.name === "search";
     },
     is1440p() {
       return this.$vuetify.breakpoint.width >= 1440;

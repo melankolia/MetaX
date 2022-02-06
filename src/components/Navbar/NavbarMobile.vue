@@ -1,6 +1,6 @@
 <template>
-  <div class="d-flex navbar-mobile py-7 pl-5">
-    <p v-if="!currentMeta" class="logo white--text ma-0">LOGO</p>
+  <div class="d-flex navbar-mobile pa-5">
+    <p v-if="!currentMeta" class="logo white--text py-2 ma-0">LOGO</p>
     <div v-else class="d-flex align-center">
       <img
         class="chevron-back mr-7"
@@ -18,7 +18,7 @@
 export default {
   methods: {
     handleBack() {
-      this.$router.replace({ name: "Home" });
+      this.$router.replace({ name: "search" });
     },
   },
   computed: {

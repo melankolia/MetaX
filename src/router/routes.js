@@ -23,7 +23,7 @@ export const configRoutes = () => [
         children: [
           {
             path: "",
-            name: "Home",
+            name: "search",
             component: Search,
           },
           {

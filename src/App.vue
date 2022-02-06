@@ -1,5 +1,5 @@
 <template>
-  <v-app style="background-color: #121212">
+  <v-app style="background-color: #181818">
     <transition name="slide-fade" mode="out-in">
       <router-view />
     </transition>

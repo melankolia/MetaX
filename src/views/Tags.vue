@@ -31,7 +31,7 @@ export default {
   methods: {
     handleBack() {
       this.$router.replace({
-        name: "Search",
+        name: "search",
       });
     },
     getList() {
