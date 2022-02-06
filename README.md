@@ -20,6 +20,16 @@ yarn build
 yarn lint
 ```
 
+
+## Screenshots
+<div align="center">
+  <img width="400" src="./Screenshots/Web-1.png">
+  <img width="400" src="./Screenshots/Web-2.png">
+  <img width="400" src="./Screenshots/Web-3.png">
+  <img width="400" src="./Screenshots/Mobile-1.png">
+  <img width="400" src="./Screenshots/Mobile-2.png">
+</div>
+
 ## Live Demo 
 You can see the Live Demo Web 
 Here [https://metax-fe.netlify.app/](https://metax-fe.netlify.app/)
