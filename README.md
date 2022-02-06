@@ -26,8 +26,8 @@ yarn lint
   <img width="400" src="./Screenshots/Web-1.png">
   <img width="400" src="./Screenshots/Web-2.png">
   <img width="400" src="./Screenshots/Web-3.png">
-  <img width="400" src="./Screenshots/Mobile-1.png">
-  <img width="400" src="./Screenshots/Mobile-2.png">
+  <img height="812" width="400" src="./Screenshots/Mobile-1.png">
+  <img height="812" width="400" src="./Screenshots/Mobile-2.png">
 </div>
 
 ## Live Demo 
