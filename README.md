@@ -23,9 +23,9 @@ yarn lint
 
 ## Screenshots
 <div align="center">
-  <img width="400" src="./Screenshots/Web-1.png">
-  <img width="400" src="./Screenshots/Web-2.png">
-  <img width="400" src="./Screenshots/Web-3.png">
+  <img width="300" src="./Screenshots/Web-1.png">
+  <img width="300" src="./Screenshots/Web-2.png">
+  <img width="300" src="./Screenshots/Web-3.png">
   <img height="406" width="187" src="./Screenshots/Mobile-1.png">
   <img height="406" width="187" src="./Screenshots/Mobile-2.png">
 </div>
