@@ -28,9 +28,14 @@
         </p>
       </div>
       <Slider @onChange="limitPerPage = $event" />
-      <v-divider style="margin: 30px 0" dark />
+      <v-divider v-if="$vuetify.breakpoint.smAnd" style="margin: 30px 0" dark />
     </div>
     <div class="button-position">
+      <v-divider
+        v-if="!$vuetify.breakpoint.smAnd"
+        style="margin-bottom: 80px"
+        dark
+      />
       <NormalButton :onClick="handleClick" text="Search" />
     </div>
   </div>
